@@ -1,5 +1,5 @@
 class Entity:
-  def __init__y, graphic(self, x, y, graphic):
+  def __init__(self, x, y, graphic):
     self.x = x
     self.y = y
     self.graphic = graphic
@@ -21,29 +21,29 @@ class Player(Mobile):
 
 	def move(self, direction):
 		def move(self, direction):
-		if direction=="w":
-			if self.y==0:
-				pass
-			else:
-				self.y-=1
+			if direction=="w":
+				if self.y==0:
+					pass
+				else:
+					self.y-=1
 
-		elif direction=="s":
-			if self.y==World1.h-1:
-				pass
-			else:
-				self.y+=1
+			elif direction=="s":
+				if self.y==World1.h-1:
+					pass
+				else:
+					self.y+=1
 
-		elif direction=="d":
-			if self.x==World1.w-1:
-				pass
-			else:
-				self.x+=1
+			elif direction=="d":
+				if self.x==World1.w-1:
+					pass
+				else:
+					self.x+=1
 
-		elif direction=="a":
-			if self.x==0:
-				pass
-			else:
-				self.x-=1
+			elif direction=="a":
+				if self.x==0:
+					pass
+				else:
+					self.x-=1
 
 class Enemy(Mobile):			
 	def __init__(self, x, y, graphic, maxHp, damage, level):
