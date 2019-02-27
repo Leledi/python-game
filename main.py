@@ -17,37 +17,29 @@ class Mobile(Entity):
 
 class Player(Mobile):
 	def __init__(self, x, y, graphic, maxHp, damage, level):
-		Entity.__init__(self, x, y, graphic, maxHp, damage, level)
+		Mobile.__init__(self, x, y, graphic, maxHp, damage, level)
 
+	
 	def move(self, direction):
-		def move(self, direction):
-			if direction=="w":
-				if self.y==0:
-					pass
-				else:
-					self.y-=1
+		if direction=="w":
+			if self.y!=0:
+				self.y-=1
 
-			elif direction=="s":
-				if self.y==World1.h-1:
-					pass
-				else:
-					self.y+=1
+		elif direction=="s":
+			if self.y!=World1.h-1:
+				self.y+=1
 
-			elif direction=="d":
-				if self.x==World1.w-1:
-					pass
-				else:
-					self.x+=1
+		elif direction=="d":
+			if self.x!=World1.w-1:
+				self.x+=1
 
-			elif direction=="a":
-				if self.x==0:
-					pass
-				else:
-					self.x-=1
+		elif direction=="a":
+			if self.x!=0:
+				self.x-=1
 
 class Enemy(Mobile):			
 	def __init__(self, x, y, graphic, maxHp, damage, level):
-		Entity.__init__(self, x, y, graphic, maxHp, damage, level)
+		Mobile.__init__(self, x, y, graphic, maxHp, damage, level)
 	def move(self):
 		direc=randint(0,4)
 		if direc==0:
@@ -65,7 +57,7 @@ class Enemy(Mobile):
 				self.x-=1
 
 
-e = Entity(5, 5, "X")
+e = Player(5, 5, "X")
 
 for y in range(10):
   for x in range(10):
@@ -75,3 +67,4 @@ for y in range(10):
       print("[ ]", end="")
 
   print()
+  e.move()
