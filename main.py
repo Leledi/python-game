@@ -5,22 +5,33 @@ class Entity:
     self.graphic = graphic
 
 class Mobile(Entity):
-	def __init__(self, x, y, graphic, maxHp, damage, level):
+	def __init__(self, x, y, graphic):
 		Entity.__init__(self, x, y, graphic)
-		self.maxHp=maxHp
-		self.curHp=maxHp
-		self.damage=damage
-		self.level=level
-
+		self.score=0
+		self.maxHp=10
+		self.curHp=self.maxHp
+		self.damage=2
+		self.level=1
+		self.status="alive"
+		self.scoremax=5
 	def attack(self,target):
 		target.curHp-=self.damage
+		if target.curHp<=0:
+			target.status="dead"
+			self.score+=target.level
+		if self.score>= self.scoremax:
+			self.level+=1
+			self.damage+=2
+			self.maxHp+=2
+			self.curHp=self.maxHp
+			self.scoremax+=5
 
 class Player(Mobile):
-	def __init__(self, x, y, graphic, maxHp, damage, level):
-		Mobile.__init__(self, x, y, graphic, maxHp, damage, level)
-
+	def __init__(self, x, y, graphic):
+		Mobile.__init__(self, x, y, graphic)
 	
-	def move(self, direction):
+	def move(self):
+		direction=input()
 		if direction=="w":
 			if self.y!=0:
 				self.y-=1
@@ -37,9 +48,13 @@ class Player(Mobile):
 			if self.x!=0:
 				self.x-=1
 
+	def level_up(self):
+		self.level+=1
+
 class Enemy(Mobile):			
-	def __init__(self, x, y, graphic, maxHp, damage, level):
-		Mobile.__init__(self, x, y, graphic, maxHp, damage, level)
+	def __init__(self, x, y, graphic):
+		Mobile.__init__(self, x, y, graphic)
+		
 	def move(self):
 		direc=randint(0,4)
 		if direc==0:
@@ -67,4 +82,6 @@ for y in range(10):
       print("[ ]", end="")
 
   print()
-  e.move()
+
+
+
