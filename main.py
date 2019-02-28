@@ -8,22 +8,23 @@ class Mobile(Entity):
 	def __init__(self, x, y, graphic):
 		Entity.__init__(self, x, y, graphic)
 		self.score=0
-		self.maxHp=10
-		self.curHp=self.maxHp
+		self.max_hp=10
+		self.cur_hp=self.max_hp
 		self.damage=2
 		self.level=1
 		self.status="alive"
 		self.scoremax=5
+	
 	def attack(self,target):
-		target.curHp-=self.damage
-		if target.curHp<=0:
+		target.cur_hp-=self.damage
+		if target.cur_hp<=0:
 			target.status="dead"
 			self.score+=target.level
 		if self.score>= self.scoremax:
 			self.level+=1
 			self.damage+=2
-			self.maxHp+=2
-			self.curHp=self.maxHp
+			self.max_hp+=2
+			self.cur_hp=self.max_hp
 			self.scoremax+=5
 
 class Player(Mobile):
@@ -47,9 +48,6 @@ class Player(Mobile):
 		elif direction=="a":
 			if self.x!=0:
 				self.x-=1
-
-	def level_up(self):
-		self.level+=1
 
 class Enemy(Mobile):			
 	def __init__(self, x, y, graphic):
