@@ -1,42 +1,99 @@
 {
-    "O": {
-        "name": "coccinella",
+    "G": {
+        "name": "gnomo",
         "color": "red",
-        "description": "che bella!",
+        "description": "un omino che saltella",
         "interactions":  {
             "no-item": {
-                "message": "la schiacci",
-                "transform": " "
+                "message": "gnomo: 'Che fai ancora qui? L'unicorno in giardino ti aspetta, Rainbowland ha bisogno di te' ",
             }
         }
     },
-    "H": {
-        "name": "idrogeno",
-        "description": "e' dell'idrogeno, non chiedermi come fai a percepirlo...",
-        "color": "magenta",
+    "U": {
+        "name": "unicorno",
+        "description": "un unicorno variopinto",
+        "color": "white",
         "interactions": {
             "no-item": {
-                "message": "ma scusa... cosa ti aspetti di fare esattamente con l'idrogeno..."
+                "message": "Unicorno: 'Per cosa mi hai preso, un taxi colorato? Portami l'arcobaleno e ne possiamo riparlare. Ora me ne vado, ti lascio la bacchetta magica' ",
+                "transform":"B"
             },
-            "L": {
-                "message": "opppero'! hai condito le lasagne con l'idrogeno sprigionando una reazione unicornosa",
-                "transform": "U"
-            }
+            
         }
     },
-    "L": {
-        "name": "lasagne",
-        "description": "sembrano appetitose",
+    "F": {
+        "name": "folletto",
+        "description": "un folletto che spadella dei pancakes",
         "color": "green",
         "interactions": {
             "no-item": {
-                "message": "fa sempre comodo avere delle lasagne in tasca",
-                "transform": " ",
-                "pickup": true
+                "message": "folletto: 'NON TI DARO' MAI I MIEI PANCAKES! Pensa piuttosto a recuperare gli oggetti'",
+            }
+        }
+    },
+    
+    "M": {
+        "name": "mela",
+        "description": "e' un mela molto rossa",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "message": "una mela al giorno toglie il medico di torno",
+            },
+
+            "B": {
+                "message": "bibbidi bobbidi bu",
+                "transform": "R"
+            },
+        }
+    },
+    "R": {
+        "name": "rosso",
+        "description": "rosso molto rosso, il primo colore dell'arcobaleno",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "pickup": true,
             }
         }
     },
     "B": {
+        "name": "bacchetta magica",
+        "description": "hai sempre voluto andare a Hogwarts e ora il tuo sogno si sta avverando",
+        "color": "black",
+        "interactions": {
+            "no-item": {
+                "message": "che bella!",
+                "pickup": true
+            }
+        }
+    },
+    "C": {
+        "name": "carota",
+        "description": "troppo arancione, sara' ogm?",
+        "color": "orange",
+        "interactions": {
+            "no-item": {
+                "message": "vorrei essere un coniglio",
+            },
+
+            "B": {
+                "message": "bibbidi bobbidi bu",
+                "transform": "A"
+            }
+        }
+    },
+    "A": {
+        "name": "arancione",
+        "description": "che bell'arancione, il secondo colore dell'arcobaleno",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "pickup": true,
+            }
+        }
+    },
+    "": {
         "name": "bomba",
         "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
         "color": "red",
