@@ -15,5 +15,10 @@
         "name": "Cucina",
         "description": "Ci sono ciotole e cibo sparso ovunque... e un essere strano sta cucinando",
         "color": "blue"
+    },
+    "3": {
+        "name": "Bagno",
+        "description": "Piccolo",
+        "color": "white"
     }
 }

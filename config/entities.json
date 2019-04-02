@@ -1,30 +1,11 @@
 {
-<<<<<<< HEAD
-    "E": {
+    "☺": {
         "name": "elfo",
-=======
-    "X":  {
-        "name": "cartaccia",
-        "description": "assolutamente inutile",
-        "color": "magenta"
-    },
-    "O": {
-        "name": "coccinella",
->>>>>>> 9a3493766624b4ffad6d0ed550569ab43ed182c0
         "color": "red",
         "description": "un omino che saltella",
         "interactions":  {
             "no-item": {
-<<<<<<< HEAD
                 "message": "elfo: 'Che fai ancora qui? L'unicorno in giardino ti aspetta, Rainbowland ha bisogno di te' "
-=======
-                "message": "la schiacci",
-                "transform": " "
-            },
-            "L": {
-                "message": "vacca se mangia...",
-                "transform": "U"
->>>>>>> 9a3493766624b4ffad6d0ed550569ab43ed182c0
             }
         }
     },
@@ -40,7 +21,7 @@
             
         }
     },
-    "F": {
+    "☻": {
         "name": "folletto",
         "description": "un folletto che spadella dei pancakes",
         "color": "green",
@@ -60,7 +41,7 @@
                 "message": "una mela al giorno toglie il medico di torno"
             },
 
-            "B": {
+            "/": {
                 "message": "bibbidi bobbidi bu",
                 "transform": "R"
             },
@@ -76,7 +57,7 @@
             }
         }
     },
-    "B": {
+    "/": {
         "name": "bacchetta magica",
         "description": "hai sempre voluto andare a Hogwarts e ora il tuo sogno si sta avverando",
         "color": "black",
@@ -87,24 +68,24 @@
             }
         }
     },
-    "C": {
+    "|": {
         "name": "carota",
         "description": "troppo arancione, sara' ogm?",
-        "color": "orange",
+        "color": "red",
         "interactions": {
             "no-item": {
                 "message": "vorrei essere un coniglio"
             },
 
-            "B": {
+            "/": {
                 "message": "bibbidi bobbidi bu",
-                "transform": "A"
+                "transform": "Æ"
             }
         }
     },
-    "A": {
+    "Æ": {
         "name": "arancione",
-        "description": "che bell'arancione, il secondo colore dell'arcobaleno",
+        "description": "che bell'arancione, un po' scuro",
         "color": "red",
         "interactions": {
             "no-item": {
@@ -112,7 +93,7 @@
             }
         }
     },
-    "L": {
+    "☼": {
         "name": "limonata",
         "description": "TROPPO ASPRA PER UN ESSERE UMANO",
         "color": "yellow",
@@ -121,7 +102,7 @@
                 "message": "preferisco la coca cola"
             },
 
-            "B": {
+            "/": {
                 "message": "bibbidi bobbidi bu",
                 "transform": "G"
             }
@@ -137,12 +118,12 @@
             }
         }
     },
-    "P": {
+    "▓": {
         "name": "prato",
         "description": "e' solo erba, non c'e' molto da dire",
         "color": "green",
         "interactions": {
-            "B": {
+            "/": {
                 "message": "bibbidi bobbidi bu",
                 "transform": "V"
             }
@@ -158,7 +139,7 @@
             }
         }
     },
-    "W": {
+    "◙": {
         "name": "water",
         "description": "come avranno fatto a colorare l'acqua di blu?",
         "color": "blue",
@@ -167,13 +148,13 @@
                 "message": "non ho bisogno di andare in bagno"
             },
 
-            "B": {
+            "/": {
                 "message": "bibbidi bobbidi bu",
-                "transform": ""
+                "transform": "B"
             }
         }
     },
-    "D": {
+    "▬": {
         "name": "divano",
         "description": "molto comodo",
         "color": "pink",
@@ -216,124 +197,200 @@
             }
         }
     },
-    "Q": {
-        "name": "quadro",
-        "description": "e' proprio un bel quadro",
+    "3": {
+        "name": "porta",
+        "description": "e' una porta",
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "spostando il quadro ti accorgi che dietro nasconte una cassaforte",
-                "transform": "F"
+                "message": "si apre",
+                "move_to_room": 3
             }
         }
     },
 
-    "F": {
-        "name": "cassaforte",
-        "description": "e' una cassaforte chiusa",
+    "N": {
+        "name": "Nuvola",
+        "description": "soffice, perfetta per contenere i colori dell'arcobaleno",
+        "color": "white",
+        "interactions": {
+            "R": {
+                "message": "la nuvola e' diventata rossa",
+                "transform": "♦",
+                "remove_from_inventory": true
+            },
+            "Æ": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "G": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "V": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "B": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "*": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            }
+        }
+    },
+
+    "*": {
+        "name": "Viola",
+        "description": "non sembra viola",
+        "color": "magenta",
+        "interactions": {
+            "no-item": {
+                "pickup": true
+            }
+        }
+    },
+
+    "○": {
+        "name": "palla",
+        "description": "ci giocavo da piccolo",
+        "color": "magenta",
+        "interactions": {
+            "no-item": {
+                "message": "non e' ora di giocare",
+            },
+            "/": {
+                "message": "bibbidi bobbidi bu",
+                "trasform":"*"
+            }
+        }
+    },
+
+    "♦": {
+        "name": "nuvola rossa",
+        "description": "la nuvola e' rossa, aggiungi il colore successivo",
+        "color": "red",
+        "interactions": {
+            "Æ": {
+                "message": "la nuvola e' diventata arancione",
+                "transform": "▲",
+                "remove_from_inventory": true
+            },
+            "G": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "V": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "B": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "*": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            }
+        }
+    },
+
+    "B": {
+        "name": "blu",
+        "description": "blu come il mare",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "pickup":true
+            }
+        }
+    },
+
+    "▲": {
+        "name": "nuvola arancione",
+        "description": "la nuvola e' arancione, aggiungi il colore successivo",
         "color": "yellow",
         "interactions": {
-            "K": {
-                "message": "la chiave entra perfettamente nella serratura; la giri",
-                "transform": "V",
+            "G": {
+                "message": "la nuvola e' diventata gialla",
+                "transform": "►",
+                "remove_from_inventory": true
+            },
+            "V": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "B": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "*": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            }
+        }
+    },
+
+    "►": {
+        "name": "nuvola gialla",
+        "description": "la nuvola e'gialla",
+        "color": "yellow",
+        "interactions": {
+            "V": {
+                "message": "la nuvola e' diventata verde",
+                "transform": "▼",
+                "remove_from_inventory": true
+            },
+            "B": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            },
+            "*": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            }
+        }
+    },
+
+    "▼": {
+        "name": "nuvola verde",
+        "description": "la nuvola e' verde",
+        "color": "green",
+        "interactions": {
+            "B": {
+                "message": "la nuvola e' diventata blu",
+                "transform": "♣",
+                "remove_from_inventory": true
+            },
+            "*": {
+                "message": "sbagliando l'ordine hai distrutto il mondo",
+                "game_over":true
+            }
+        }
+    },
+    "♣": {
+        "name": "nuvola blu",
+        "description": "la nuvola e' blu",
+        "color": "blue",
+        "interactions": {
+            "*": {
+                "message": "bravo!!!!! hai messo tutti i colori",
+                "transform": "ƒ",
                 "remove_from_inventory": true
             }
         }
     },
-
-    "V": {
-        "name": "Tenaglie",
-        "description": "sono delle tenaglie piuttosto affilate",
-        "color": "green",
+    "ƒ": {
+        "name": "arcobaleno",
+        "description": "quanti colori!!!",
+        "color": "white",
         "interactions": {
-            "no-item": {
-                "message": "le raccogli",
-                "transform": " ",
-                "pickup": true
+            "U": {
+                "message": "l'unicorno e' felice perche' hai salvato Rainbowland",
+                "win":true
             }
         }
-    },
-
-    "P": {
-        "name": "pianta",
-        "description": "questa pianta non viene annaffiata da molto tempo",
-        "color": "green",
-        "interactions": {
-            "no-item": {
-                "message": "spostando il vaso noti qualcosa di interessante",
-                "transform": "K"
-            }
-        }
-    },
-
-    "C": {
-        "name": "candelabro",
-        "description": "un vecchio candelabro arrugginito",
-        "color": "yellow",
-        "interactions": {
-            "V": {
-                "message": "mmm, ha proprio senso... abra cadabra!",
-                "transform": " ",
-                "pickup": true
-            },
-            "C": {
-                "message": "mindfuckkkkk!!!!",
-                "transform": "U"
-            }
-        }
-    },
-
-    "U": {
-        "name": "unicorno",
-        "description": "che splendido esemplare fatato!",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "che splendida sensazione",
-                "win": "voli via contento e vivrai una vita fatta di soddisfazioni cucciolose"
-            },
-
-            "L": {
-                "message": "quello che una volta  era un leggiadro  unicorno ora e' un unicorno obeso! non volera' mai piu'",
-                "game_over": "peccato!"
-            }
-        }
-    },
-
-    "K": {
-        "name": "chiave",
-        "description": "e' una piccola chiave",
-        "color": "yellow",
-        "interactions": {
-            "no-item": {
-                "message": "la raccogli",
-                "transform": " ",
-                "pickup": true
-            }
-        }
-    },
-
-    "+": {
-        "name": "interruttore",
-        "description": "e' un interruttore posizionato su ACCESO",
-        "color": "black",
-        "interactions": {
-            "no-item": { 
-                "message": "lo premi",
-                "transform": "-"
-            }
-        }
-    },
-
-    "-": {
-        "name": "interruttore",
-        "description": "e' un interruttore posizionato su SPENTO",
-        "color": "black",
-        "interactions": {
-            "no-item": { 
-                "message": "lo premi",
-                "transform": "+"
-            }
-        }  
     }
 }
