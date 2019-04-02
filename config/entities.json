@@ -1,11 +1,30 @@
 {
+<<<<<<< HEAD
     "E": {
         "name": "elfo",
+=======
+    "X":  {
+        "name": "cartaccia",
+        "description": "assolutamente inutile",
+        "color": "magenta"
+    },
+    "O": {
+        "name": "coccinella",
+>>>>>>> 9a3493766624b4ffad6d0ed550569ab43ed182c0
         "color": "red",
         "description": "un omino che saltella",
         "interactions":  {
             "no-item": {
+<<<<<<< HEAD
                 "message": "elfo: 'Che fai ancora qui? L'unicorno in giardino ti aspetta, Rainbowland ha bisogno di te' "
+=======
+                "message": "la schiacci",
+                "transform": " "
+            },
+            "L": {
+                "message": "vacca se mangia...",
+                "transform": "U"
+>>>>>>> 9a3493766624b4ffad6d0ed550569ab43ed182c0
             }
         }
     },
@@ -297,7 +316,7 @@
     "+": {
         "name": "interruttore",
         "description": "e' un interruttore posizionato su ACCESO",
-        "color": "da_black",
+        "color": "black",
         "interactions": {
             "no-item": { 
                 "message": "lo premi",
@@ -309,7 +328,7 @@
     "-": {
         "name": "interruttore",
         "description": "e' un interruttore posizionato su SPENTO",
-        "color": "da_black",
+        "color": "black",
         "interactions": {
             "no-item": { 
                 "message": "lo premi",
