@@ -1,11 +1,11 @@
 {
-    "G": {
-        "name": "gnomo",
+    "E": {
+        "name": "elfo",
         "color": "red",
         "description": "un omino che saltella",
         "interactions":  {
             "no-item": {
-                "message": "gnomo: 'Che fai ancora qui? L'unicorno in giardino ti aspetta, Rainbowland ha bisogno di te' ",
+                "message": "elfo: 'Che fai ancora qui? L'unicorno in giardino ti aspetta, Rainbowland ha bisogno di te' "
             }
         }
     },
@@ -27,7 +27,7 @@
         "color": "green",
         "interactions": {
             "no-item": {
-                "message": "folletto: 'NON TI DARO' MAI I MIEI PANCAKES! Pensa piuttosto a recuperare gli oggetti'",
+                "message": "folletto: 'NON TI DARO' MAI I MIEI PANCAKES! Pensa piuttosto a recuperare gli oggetti'"
             }
         }
     },
@@ -38,7 +38,7 @@
         "color": "red",
         "interactions": {
             "no-item": {
-                "message": "una mela al giorno toglie il medico di torno",
+                "message": "una mela al giorno toglie il medico di torno"
             },
 
             "B": {
@@ -53,7 +53,7 @@
         "color": "red",
         "interactions": {
             "no-item": {
-                "pickup": true,
+                "pickup": true
             }
         }
     },
@@ -74,7 +74,7 @@
         "color": "orange",
         "interactions": {
             "no-item": {
-                "message": "vorrei essere un coniglio",
+                "message": "vorrei essere un coniglio"
             },
 
             "B": {
@@ -89,27 +89,78 @@
         "color": "red",
         "interactions": {
             "no-item": {
-                "pickup": true,
+                "pickup": true
             }
         }
     },
-    "": {
-        "name": "bomba",
-        "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
-        "color": "red",
+    "L": {
+        "name": "limonata",
+        "description": "TROPPO ASPRA PER UN ESSERE UMANO",
+        "color": "yellow",
         "interactions": {
             "no-item": {
-                "message": "biiiip biiiiiiip biiiiiiiiiiiip",
-                "game_over": "la bomba esplode demolendo l'intera stanza"
+                "message": "preferisco la coca cola"
             },
 
-            "V": {
-                "message": "tagli con attenzione un filo che penzola da un lato dell'ordigno...",
-                "win": "hai disinnescato la bomba con successo, sei sano e salvo!"
+            "B": {
+                "message": "bibbidi bobbidi bu",
+                "transform": "G"
+            }
+        }
+    },
+    "G": {
+        "name": "giallo",
+        "description": "mi ricora il canarino che avevo da piccolo... una storia triste...",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "pickup": true
+            }
+        }
+    },
+    "P": {
+        "name": "prato",
+        "description": "e' solo erba, non c'e' molto da dire",
+        "color": "green",
+        "interactions": {
+            "B": {
+                "message": "bibbidi bobbidi bu",
+                "transform": "V"
+            }
+        }
+    },
+    "V": {
+        "name": "verde",
+        "description": "alla luce del sole sbirluccica",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "pickup": true
+            }
+        }
+    },
+    "W": {
+        "name": "water",
+        "description": "come avranno fatto a colorare l'acqua di blu?",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "non ho bisogno di andare in bagno"
             },
 
-            "L": {
-                "message": "sei un pervertito"
+            "B": {
+                "message": "bibbidi bobbidi bu",
+                "transform": ""
+            }
+        }
+    },
+    "D": {
+        "name": "divano",
+        "description": "molto comodo",
+        "color": "pink",
+        "interactions": {
+            "no-item": {
+                "message": "non e' il momento per un pisolino"
             }
         }
     },

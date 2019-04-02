@@ -1,19 +1,19 @@
 {
     "0": {
-        "name": "Sala",
-        "description": "Questo luogo e' abbastanza accogliente nonostante il senso di claustrofobia che ti trasmette",
+        "name": "Salotto",
+        "description": "E' tutto in disordine, probabilmente a causa dell'omino che salta sul divano",
         "color": "white"
     },
 
     "1": {
-        "name": "Cucina",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
-        "color": "red"
+        "name": "Giardino",
+        "description": "Grande e verde",
+        "color": "green"
     },
     
     "2": {
-        "name": "Sogno",
-        "description": "sei evidentemente in un sogno",
-        "color": "black"
+        "name": "Cucina",
+        "description": "Ci sono ciotole e cibo sparso ovunque... e un essere strano sta cucinando",
+        "color": "blue"
     }
 }
