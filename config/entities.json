@@ -1,68 +1,54 @@
 {
-    "X":  {
-        "name": "cartaccia",
-        "description": "assolutamente inutile",
-        "color": "magenta"
-    },
-    "O": {
-        "name": "coccinella",
-        "color": "red",
-        "description": "che bella!",
-        "interactions":  {
-            "no-item": {
-                "message": "la schiacci",
-                "transform": " "
-            },
-            "L": {
-                "message": "vacca se mangia...",
-                "transform": "U"
-            }
-        }
-    },
-    "H": {
-        "name": "idrogeno",
-        "description": "e' dell'idrogeno, non chiedermi come fai a percepirlo...",
+    "L":  {
+        "name": "Lucia",
+        "description": "piange perchè il matrimonio è saltato ed è preoccupata per il piano",
         "color": "magenta",
         "interactions": {
+             "no-item": {
+                "message": "La consoli e cerchi di convicerla",
+            }
+        }             
+    },
+    "M": {
+        "name": "Agnese, madre di Lucia",
+        "color": "red",
+        "description": "cerca di consolare Lucia",
+        "interactions":  {
             "no-item": {
-                "message": "ma scusa... cosa ti aspetti di fare esattamente con l'idrogeno..."
-            },
-            "L": {
-                "message": "opppero'! hai condito le lasagne con l'idrogeno sprigionando una reazione unicornosa",
-                "transform": "U"
+                "message": "Agnese: 'Vai a cercare due testimoni per il matrimonio, sbrigati!'",
             }
         }
     },
-    "L": {
-        "name": "lasagne",
-        "description": "sembrano appetitose",
-        "color": "green",
+    "F": {
+        "name": "Don Abbondio",
+        "description": "Dai suoi comportamenti non sembra affatto un prete",
+        "color": "black",
         "interactions": {
             "no-item": {
-                "message": "fa sempre comodo avere delle lasagne in tasca",
-                "transform": " ",
-                "pickup": true
+                "message": "Don Abbondio: 'Sparisci! Non voglio altri guai a causa vostra!'"
+            },
+            "T": {
+                "message": "Don Abbondio: 'Finalmente stai pagando il tuo debito... vediamo un pòo' qua'",
+                "transform": "O",
+                "remove_from_inventory":true
+            }
+        }
+    },
+    "O": {
+        "name": "Don Abbondio ",
+        "description": "Sembra occupato, e' il vostro momento",
+        "color": "black",
+        "interactions": {
+            "no-item": {
+                "message": "Saltate fuori da dietro Tonio e Gervasio. \nDon abbondio, con i suoi ottimi riflessi, reagisce, scappa e chiede aiuto",
+                "transform": " "
             }
         }
     },
     "B": {
-        "name": "bomba",
-        "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
-        "color": "red",
-        "interactions": {
-            "no-item": {
-                "message": "biiiip biiiiiiip biiiiiiiiiiiip",
-                "game_over": "la bomba esplode demolendo l'intera stanza"
-            },
-
-            "V": {
-                "message": "tagli con attenzione un filo che penzola da un lato dell'ordigno...",
-                "win": "hai disinnescato la bomba con successo, sei sano e salvo!"
-            },
-
-            "L": {
-                "message": "sei un pervertito"
-            }
+        "name": "Bravo",
+        "description": "meglio stargli lontano",
+        "color": "green",
         }
     },
     "1": {
@@ -82,8 +68,8 @@
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "quale porta scusa???",
-                "transform": "L"
+                "message": "si apre",
+                "move_to_room": 2
             }
         }
     },
@@ -98,69 +84,82 @@
             }
         }
     },
-    "Q": {
-        "name": "quadro",
-        "description": "e' proprio un bel quadro",
+    "P": {
+        "name": "Perpetua",
+        "description": "sta ancora chiacchierando",
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "spostando il quadro ti accorgi che dietro nasconte una cassaforte",
-                "transform": "F"
+                "message": "bla, bla, bla..."
             }
         }
     },
 
-    "F": {
-        "name": "cassaforte",
-        "description": "e' una cassaforte chiusa",
+    "@": {
+        "name": "monete",
+        "description": "ti serviranno per convincere Tonio",
         "color": "yellow",
         "interactions": {
-            "K": {
-                "message": "la chiave entra perfettamente nella serratura; la giri",
-                "transform": "V",
-                "remove_from_inventory": true
+            "pickup": true
+        }
+    },
+    "3": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 3
             }
         }
     },
-
-    "V": {
-        "name": "Tenaglie",
-        "description": "sono delle tenaglie piuttosto affilate",
-        "color": "green",
+    "4": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "le raccogli",
-                "transform": " ",
+                "message": "si apre",
+                "move_to_room": 4
+            }
+        }
+    },
+    "T": {
+        "name": "Tonio",
+        "description": "un tuo amico",
+        "color": "red",
+        "interactions": {
+            "@": {
+                "message": "Tonio: ' Quindi se ti faro' da testimone pagherai il mio debito? Accetto! '",
                 "pickup": true
-            }
-        }
-    },
-
-    "P": {
-        "name": "pianta",
-        "description": "questa pianta non viene annaffiata da molto tempo",
-        "color": "green",
-        "interactions": {
-            "no-item": {
-                "message": "spostando il vaso noti qualcosa di interessante",
-                "transform": "K"
             }
         }
     },
 
     "C": {
-        "name": "candelabro",
-        "description": "un vecchio candelabro arrugginito",
+        "name": "Fra Cristoforo",
+        "description": "un buon frate che sta cercando di aiutarvi",
+        "color": "white",
+        "interactions": {
+            "no-item": {
+                "message": "sta pregando, meglio non disturbarlo",
+            },
+            "B": {
+                "message":"Lucia e Agnese scapperanno a Monza, tu a Milano. Questo e' il piano"
+            }
+
+        }
+    },
+
+    "B": {
+        "name": "Menico, bambino del paese",
+        "description": "e' appena tornato dal monastero",
         "color": "yellow",
         "interactions": {
-            "V": {
-                "message": "mmm, ha proprio senso... abra cadabra!",
-                "transform": " ",
+            "no-item": {
+                "message": "Menico:' Scappate al monastero! A casa vostra ci sono i bravi! Seguitemi '",
                 "pickup": true
-            },
-            "C": {
-                "message": "mindfuckkkkk!!!!",
-                "transform": "U"
             }
         }
     },

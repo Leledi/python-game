@@ -1,19 +1,29 @@
 {
     "0": {
-        "name": "Sala",
-        "description": "Questo luogo e' abbastanza accogliente nonostante il senso di claustrofobia che ti trasmette",
+        "name": "Casa Mondella",
+        "description": "Il clima e' agitato per la preparazione del matrimonio a sorpresa",
         "color": "white"
     },
 
     "1": {
-        "name": "Cucina",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
-        "color": "red"
+        "name": "Piazza del paese",
+        "description": "Affollata come al solito",
+        "color": "black"
     },
     
     "2": {
-        "name": "Sogno",
-        "description": "sei evidentemente in un sogno",
+        "name": "Casa di Don Abbondio",
+        "description": "piccola e accogliente",
+        "color": "blue"
+    },
+    "3": {
+        "name": "Osteria",
+        "description": "e' dove ti aspetta Tonio",
+        "color": "cyan"
+    },
+    "4": {
+        "name": "Monastero",
+        "description":"e' molto grande e antico",
         "color": "black"
     }
 }
