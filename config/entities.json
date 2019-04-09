@@ -1,0 +1,221 @@
+{
+    "X":  {
+        "name": "cartaccia",
+        "description": "assolutamente inutile",
+        "color": "magenta"
+    },
+    "O": {
+        "name": "coccinella",
+        "color": "red",
+        "description": "che bella!",
+        "interactions":  {
+            "no-item": {
+                "message": "la schiacci",
+                "transform": " "
+            },
+            "L": {
+                "message": "vacca se mangia...",
+                "transform": "U"
+            }
+        }
+    },
+    "H": {
+        "name": "idrogeno",
+        "description": "e' dell'idrogeno, non chiedermi come fai a percepirlo...",
+        "color": "magenta",
+        "interactions": {
+            "no-item": {
+                "message": "ma scusa... cosa ti aspetti di fare esattamente con l'idrogeno..."
+            },
+            "L": {
+                "message": "opppero'! hai condito le lasagne con l'idrogeno sprigionando una reazione unicornosa",
+                "transform": "U"
+            }
+        }
+    },
+    "L": {
+        "name": "lasagne",
+        "description": "sembrano appetitose",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "fa sempre comodo avere delle lasagne in tasca",
+                "transform": " ",
+                "pickup": true
+            }
+        }
+    },
+    "B": {
+        "name": "bomba",
+        "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "message": "biiiip biiiiiiip biiiiiiiiiiiip",
+                "game_over": "la bomba esplode demolendo l'intera stanza"
+            },
+
+            "V": {
+                "message": "tagli con attenzione un filo che penzola da un lato dell'ordigno...",
+                "win": "hai disinnescato la bomba con successo, sei sano e salvo!"
+            },
+
+            "L": {
+                "message": "sei un pervertito"
+            }
+        }
+    },
+    "1": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 1
+            }
+        }
+    },
+    "2": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "quale porta scusa???",
+                "transform": "L"
+            }
+        }
+    },
+    "0": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 0
+            }
+        }
+    },
+    "Q": {
+        "name": "quadro",
+        "description": "e' proprio un bel quadro",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "spostando il quadro ti accorgi che dietro nasconte una cassaforte",
+                "transform": "F"
+            }
+        }
+    },
+
+    "F": {
+        "name": "cassaforte",
+        "description": "e' una cassaforte chiusa",
+        "color": "yellow",
+        "interactions": {
+            "K": {
+                "message": "la chiave entra perfettamente nella serratura; la giri",
+                "transform": "V",
+                "remove_from_inventory": true
+            }
+        }
+    },
+
+    "V": {
+        "name": "Tenaglie",
+        "description": "sono delle tenaglie piuttosto affilate",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "le raccogli",
+                "transform": " ",
+                "pickup": true
+            }
+        }
+    },
+
+    "P": {
+        "name": "pianta",
+        "description": "questa pianta non viene annaffiata da molto tempo",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "spostando il vaso noti qualcosa di interessante",
+                "transform": "K"
+            }
+        }
+    },
+
+    "C": {
+        "name": "candelabro",
+        "description": "un vecchio candelabro arrugginito",
+        "color": "yellow",
+        "interactions": {
+            "V": {
+                "message": "mmm, ha proprio senso... abra cadabra!",
+                "transform": " ",
+                "pickup": true
+            },
+            "C": {
+                "message": "mindfuckkkkk!!!!",
+                "transform": "U"
+            }
+        }
+    },
+
+    "U": {
+        "name": "unicorno",
+        "description": "che splendido esemplare fatato!",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "che splendida sensazione",
+                "win": "voli via contento e vivrai una vita fatta di soddisfazioni cucciolose"
+            },
+
+            "L": {
+                "message": "quello che una volta  era un leggiadro  unicorno ora e' un unicorno obeso! non volera' mai piu'",
+                "game_over": "peccato!"
+            }
+        }
+    },
+
+    "K": {
+        "name": "chiave",
+        "description": "e' una piccola chiave",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "message": "la raccogli",
+                "transform": " ",
+                "pickup": true
+            }
+        }
+    },
+
+    "+": {
+        "name": "interruttore",
+        "description": "e' un interruttore posizionato su ACCESO",
+        "color": "black",
+        "interactions": {
+            "no-item": { 
+                "message": "lo premi",
+                "transform": "-"
+            }
+        }
+    },
+
+    "-": {
+        "name": "interruttore",
+        "description": "e' un interruttore posizionato su SPENTO",
+        "color": "black",
+        "interactions": {
+            "no-item": { 
+                "message": "lo premi",
+                "transform": "+"
+            }
+        }  
+    }
+}
